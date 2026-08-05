@@ -20,126 +20,108 @@
 
 ### 🔍 SME Feedback from the Break Through Tech Evaluation Team
 
-*Challenge Advisor: Please address the following feedback by editing this page. Your AI Studio Coach can help make project adjustments as needed, too. In addition to the grey section above, this section should be removed before sharing the repo with your student team.*
+## 📋 BTT Internal Evaluation Notes
+*(This section is for BTT staff and CAs only — remove before sharing with students)*
+
+### Technical Vetting
+| Check | Status | Notes |
+| :--- | :--- | :--- |
+| Python Compatibility | 🟢 | Project relies on standard libraries (pandas, scikit-learn, nltk/spacy) which are well-supported in Colab. |
+| Data Readiness | 🟡 | Integrating multiple disparate APIs (Census, GTFS, Open-Meteo) significantly increases pre-processing burden for undergraduates. |
+| Resource Check | 🟢 | Dataset size is small, and hardware requirements are compatible with Google Colab free tier. |
+
+### Internal Scores
+- **Student Fit Score:** 6/10
+- **Technical Depth Score:** 7/10
+- **Overall Recommendation:** REVISE
+
+### Advisor Feedback Draft
+This project offers a compelling use case for fan engagement, but the data acquisition strategy is overly complex for a 12-week sprint. I recommend focusing on one or two core data sources (e.g., nflverse reviews and pricing) to ensure depth over breadth. Please narrow the scope to a deterministic classification of 'high vs. low value' to allow students to prioritize model explainability and evaluation metrics over API integration maintenance.
 
 ---
 
-# [Project Title]
+# Assessing Football Stadium Attendance and Experience During the Regular Season
 
-**Company / Org:** [Company / Org Name]  
-**Challenge Advisor:** [Name, Email]  
-**AI Studio Coach:** [Name, Email]  
-**Program:** Break Through Tech AI Studio - Fall 2026
+**Company / Org:** Other  
+**Challenge Advisor:** Christina Coleman, coleman.chris.m@gmail.com  
+**Program:** Break Through Tech AI Studio - Fall 2026  
 
 ---
 
-## 🏢 About [Company / Org Name]
-
-[2-3 sentences about your company: what you do, your industry, etc. You may also choose to specify your specific department or team.]
+## 🏢 About Other
+Other is an independent initiative focused on enhancing sports fan engagement through data-driven insights. By analyzing the intersection of infrastructure, weather, and fan sentiment, the organization aims to optimize the gameday experience and improve overall stadium attendance.
 
 ---
 
 ## 🎯 The Challenge
-
 ### Project Summary
-[In 2-3 sentences, describe what you're asking the team to do. Be specific about the type of data, ML techniques, and potential impact.]
-
-> **Example:** "In this project, your team will use customer transaction data and classification algorithms to build a model that predicts which users are likely to churn. This will help our retention team prioritize outreach."
+This project leverages fan review datasets and multi-source API data—including weather, demographic, and transport metrics—to build a predictive model that identifies the value of attending specific NFL games. By applying natural language processing for sentiment analysis and classification/regression modeling, the team will develop a "worth attending" score to assist fans in making data-backed ticket purchasing decisions.
 
 ### Success Criteria
-[What does success look like? Describe evaluation metrics (accuracy, F1 score, etc.) or qualitative outcomes that would make this project valuable to your company.]
+Model successfully produces outputs. Understanding of agile/scrum methodologies. Team can confidently explain why they made decisions they did to get the model to its end state. Have a technical and non-technical understanding of the solution and use case.
 
 ### Project Milestones
-
-Use these milestones to guide your work. Your team will create a **GitHub Projects board** to track tasks within each milestone.
-
+Use these milestones to guide your work. Your team will create a GitHub Projects board to track tasks within each milestone.
 | Month | Milestone | Key Activities |
 |-------|-----------|----------------|
-| **September** | [e.g., Data Understanding] | [e.g., Explore dataset, handle missing values, document findings] |
-| **October** | [e.g., Model Development] | [e.g., Train baseline model, experiment with approaches, iterate] |
-| **November** | [e.g., Evaluation & Presentation] | [e.g., Finalize model, prepare presentation, document results] |
+| **September** | Data Exploration & Preprocessing | Import and normalize disparate datasets, conduct exploratory data analysis on fan reviews, and perform outlier detection on ticket pricing data. |
+| **October** | Feature Engineering & Baseline Modeling | Engineer features from Open-Meteo and GTFS data; train baseline regression and classification models to identify primary value drivers. |
+| **November** | Model Optimization & Evaluation | Execute hyperparameter tuning, conduct model validation against historical gameday data, and perform cross-validation to assess reliability. |
+| **December** | Insights, Deliverables & Presentation | Finalize the predictive dashboard or interface, document business recommendations, and prepare the final presentation for stakeholders. |
 
 > **Note for the team:** Please create a GitHub Projects board in this repository to break these milestones into weekly tasks. Go to the **Projects** tab → **New project** → Choose **Board** → Add columns for each month.
 
 ---
 
 ## 📊 Dataset
-
-**Name and Source:** [Dataset name and where it's from]  
-**Format:** [e.g., CSV, JSON, images]  
-**Size:** [Approximate size in MB/GB]  
-**Location:** [Link to dataset or instructions for accessing it]
+**Name and Source:** Stadium and Venue Review Datasets (nflverse, Open-Meteo, Census, GTFS)  
+**Format:** CSV, JSON  
+**Size:** under 1gb  
+**Location:** Internal project folder/Kaggle Repository  
 
 ### Key Details
-- [Brief description of what's in the data]
-- [Any known limitations or preprocessing needed]
-- [Link to data dictionary or documentation, if available]
+- Stadium and venue review data, including fan reviews, ratings, and gameday experience factors. Sources include nflverse, nflreadpy, Open-Meteo, OpenStreetMap Overpass API, Mobility Database GTFS.org, and U.S. Census Bureau API.
+- Data requires normalization across disparate geographic and temporal scales; missing values in review text must be handled via NLP cleaning pipelines, while numeric API data requires interpolation for missing time-series points.
 
 ---
 
 ## 🛠️ Suggested Approach
-
-**ML Problem Type:** [e.g., Classification, Regression, NLP, Computer Vision, LLM/RAG]
-
-**Recommended Libraries:**
-- [e.g., pandas, scikit-learn, TensorFlow, Hugging Face]
-
-**Evaluation Metrics:**
-- [e.g., Accuracy, Precision/Recall, RMSE, BLEU score]
+**ML Problem Type:** Classification & Regression  
+**Recommended Libraries:** Pandas, Scikit-learn, NLTK, Spacy, XGBoost  
+**Evaluation Metrics:** Precision-Recall AUC for classification, Mean Absolute Error (MAE) for price/value regression, and F1-score for sentiment classification.
 
 ---
 
 ## 📚 Resources to Get Started
-
 The following resources will help your team understand the problem space and potential technical approaches for this project:
-
 **Background Reading:**
-- [e.g., Link to an article or blog post about the problem domain]
-- [e.g., Link to an industry report or case study]
-
+- NFL Analytics: Introduction to the `nflverse` ecosystem and its application in stadium data.
 **Technical Tutorials:**
-- [e.g., Link to a free tutorial on the ML technique(s) involved]
-- [e.g., Link to documentation for a key library or tool]
-
+- Scikit-learn documentation on Classification and Regression pipelines for tabular datasets.
 **Code Examples:**
-- [e.g., Link to a relevant GitHub repo]
-- [e.g., Link to a sample implementation or starter code]
-
-**Other:**
-- [Links to any additional resources — e.g., papers, videos, podcasts, etc.]
-
-*Feel free to explore beyond these, and share anything interesting you find with me!*
+- Sample GitHub repositories showcasing NLP sentiment analysis applied to review-based datasets.
 
 ---
 
 ## 🤝 How We'll Work Together
-
-**Official check-ins:** During our biweekly 45-minute AI Studio Lab Section meeting block (2nd and 4th week of every month)
-
- **Other ways to reach out to me with questions:** 
-* [e.g., Your team's channel within Break Through Tech’s Discord space]
-* [e.g., Email; please copy your teammates and AI Studio Coach]
-* [e.g., Request a team check-in on Zoom]
-* [Note: I will aim to respond within 48 hours. Please reach out to your AI Studio Coach with urgent questions.]
-
-> 💡 **Challenge Advisor: Please update the above based on your availability and preference. If you are not able to answer questions or meet with fellows outside of the biweekly Lab Section check-ins, simply write in "N/A (only available during the official check-in times)"**
-
-**Recommended free coding / collaboration tools**
-* […]
-* […]
+**Check-ins:** During our biweekly 60-min AI Studio Lab Section meeting block (2nd and 4th week of every month)  
+**Communication:** Email and Slack workspace  
+**Response time:** 48 hours  
+**Recommended Tools:**
+- **Coding:** Google Colab Free Tier  
+- **Collaboration:** GitHub, Notion  
+- **Virtual Meetings:** Zoom, Google Meet  
 
 ---
 
 ## 🚀 Getting Started
+1. **Review this overview document** and note any questions for our first meeting.
+2. **Begin reviewing the dataset** using the link provided in the Dataset section.
+3. **Read the GitHub Projects documentation** [here](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects).
 
-1. **Review this overview document** and note any questions for our first meeting
-2. **Begin reviewing the dataset** using the link above
-3. **Read the GitHub Projects documentation** [here](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
-
-I’m excited to work with you!
+I'm excited to work with you!
 
 ---
 
 ## ❓ Questions?
-
-Please bring any questions to our first meeting during the week of August 24th (Break Through Tech’s Bridge to Studio - Session C). 
+Please bring any questions to our first meeting during the week of August 24th (Break Through Tech's Bridge to Studio - Session B).
