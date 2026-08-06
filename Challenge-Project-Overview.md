@@ -62,12 +62,17 @@ Model successfully produces outputs. Understanding of agile/scrum methodologies.
 
 ### Project Milestones
 Use these milestones to guide your work. Your team will create a GitHub Projects board to track tasks within each milestone.
+
 | Month | Milestone | Key Activities |
-|-------|-----------|----------------|
-| **September** | Data Exploration & Preprocessing | Import and normalize disparate datasets, conduct exploratory data analysis on fan reviews, and perform outlier detection on ticket pricing data. |
-| **October** | Feature Engineering & Baseline Modeling | Engineer features from Open-Meteo and GTFS data; train baseline regression and classification models to identify primary value drivers. |
-| **November** | Model Optimization & Evaluation | Execute hyperparameter tuning, conduct model validation against historical gameday data, and perform cross-validation to assess reliability. |
-| **December** | Insights, Deliverables & Presentation | Finalize the predictive dashboard or interface, document business recommendations, and prepare the final presentation for stakeholders. |
+| :--- | :--- | :--- |
+| September | Data Ingestion, Aggregation & EDA | • Ingest and integrate multi-source data (nflverse/nflreadpy, Open-Meteo weather data, GTFS mobility/transit, Census demographics).<br>• Clean, impute missing values, and align game schedules with historical weather and venue location metrics.<br>• Perform Exploratory Data Analysis (EDA) on attendance trends, venue capacity utilization, kickoff timing, and weather conditions. |
+| October | Feature Engineering & Predictive Modeling | • Engineer domain features including team winning record, rivalry indicators, weather impact indices, and stadium transit accessibility.<br>• Train baseline and advanced regression/time-series models (e.g., Random Forest, XGBoost, Ridge Regression) to forecast game-day attendance.<br>• Perform cross-validation, hyperparameter tuning, and model evaluation using MAE, RMSE, and $R^2$. |
+| November / December | Model Interpretability, Interactive UI & Deliverables | • Apply model explainability (e.g., SHAP values) to isolate key attendance drivers (e.g., weather severity vs. team record vs. kickoff timing).<br>• Develop an interactive Streamlit dashboard enabling stadium operators to simulate game-day attendance under varying conditions.<br>• Finalize clean, reproducible GitHub repository, documentation, and final presentation deck. |
+
+### Stretch Goals
+* **Live Weather Forecast API Integration:** Connect real-time weather forecasting APIs to dynamically update attendance predictions as game day approaches.
+* **Concession & Operational Demand Estimation:** Extend attendance forecasts to predict stadium concession, staffing, or local transit capacity requirements based on expected occupancy.
+* **Fan Engagement & Sentiment Integration:** Incorporate fan social media sentiment or team momentum metrics to capture qualitative demand drivers surrounding marquee matchups.
 
 > **Note for the team:** Please create a GitHub Projects board in this repository to break these milestones into weekly tasks. Go to the **Projects** tab → **New project** → Choose **Board** → Add columns for each month.
 
