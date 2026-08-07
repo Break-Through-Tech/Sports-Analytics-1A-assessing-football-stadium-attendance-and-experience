@@ -55,78 +55,106 @@ Other is an independent initiative focused on enhancing sports fan engagement th
 
 ## 🎯 The Challenge
 ### Project Summary
-This project leverages fan review datasets and multi-source API data—including weather, demographic, and transport metrics—to build a predictive model that identifies the value of attending specific NFL games. By applying natural language processing for sentiment analysis and classification/regression modeling, the team will develop a "worth attending" score to assist fans in making data-backed ticket purchasing decisions.
+In this project, you will use stadium and venue review data (Kaggle-hosted datasets covering fan reviews, ratings, and gameday experience factors) and natural language processing and predictive modeling techniques (e.g., sentiment analysis, regression/classification) to build a model that scores whether a given game is 'worth attending' based on price, seat quality, and overall fan experience signals. This will help our company address the challenge of helping fans make informed decisions about ticket value, ultimately improving gameday attendance and satisfaction."
 
 ### Success Criteria
-Model successfully produces outputs. Understanding of agile/scrum methodologies. Team can confidently explain why they made decisions they did to get the model to its end state. Have a technical and non-technical understanding of the solution and use case.
+
+- Understanding of agile/scrum methodologies (understands basic terminologies and ceremonies applied throughout duration of the program)
+- Team can confidently explain why they made decisions they did to get the model to its end state along the way
+- Have a technical and non-technical understanding of the solution and use case (i.e. if communicating to non-technical audiences/final presentation prep)
+- Model successfully produces outputs
 
 ### Project Milestones
 Use these milestones to guide your work. Your team will create a GitHub Projects board to track tasks within each milestone.
 
 | Month | Milestone | Key Activities |
-| :--- | :--- | :--- |
-| September | Data Ingestion, Aggregation & EDA | • Ingest and integrate multi-source data (nflverse/nflreadpy, Open-Meteo weather data, GTFS mobility/transit, Census demographics).<br>• Clean, impute missing values, and align game schedules with historical weather and venue location metrics.<br>• Perform Exploratory Data Analysis (EDA) on attendance trends, venue capacity utilization, kickoff timing, and weather conditions. |
-| October | Feature Engineering & Predictive Modeling | • Engineer domain features including team winning record, rivalry indicators, weather impact indices, and stadium transit accessibility.<br>• Train baseline and advanced regression/time-series models (e.g., Random Forest, XGBoost, Ridge Regression) to forecast game-day attendance.<br>• Perform cross-validation, hyperparameter tuning, and model evaluation using MAE, RMSE, and $R^2$. |
-| November / December | Model Interpretability, Interactive UI & Deliverables | • Apply model explainability (e.g., SHAP values) to isolate key attendance drivers (e.g., weather severity vs. team record vs. kickoff timing).<br>• Develop an interactive Streamlit dashboard enabling stadium operators to simulate game-day attendance under varying conditions.<br>• Finalize clean, reproducible GitHub repository, documentation, and final presentation deck. |
-
-### Stretch Goals
-* **Live Weather Forecast API Integration:** Connect real-time weather forecasting APIs to dynamically update attendance predictions as game day approaches.
-* **Concession & Operational Demand Estimation:** Extend attendance forecasts to predict stadium concession, staffing, or local transit capacity requirements based on expected occupancy.
-* **Fan Engagement & Sentiment Integration:** Incorporate fan social media sentiment or team momentum metrics to capture qualitative demand drivers surrounding marquee matchups.
+|---|---|---|
+| August | Challenge Setup & Team Onboarding | • Finalize challenge brief and dataset<br>• Draft rubric/success criteria for "worth attending" scoring model<br>• Onboard student teams; walk through problem statement and data |
+| September | Exploratory Data Analysis & Feature Engineering | • Teams complete exploratory data analysis (EDA) on the review dataset<br>• Data cleaning and feature engineering (price, seat quality, sentiment signals)<br>• Checkpoint: teams present initial data insights |
+| October | Baseline Modeling & Midpoint Review | • Baseline model development<br>• Midpoint check-in: model performance review, troubleshoot data gaps<br>• Begin iterating with sentiment components if using review text |
+| November | Model Refinement & User-Facing Output | • Model refinement and validation<br>• Build out user-facing output (dashboard, score, or simple interface if necessary)<br>• Draft presentation/pitch narrative tying the model back to the business problem |
+| December | Final Testing & Showcase | • Final testing<br>• Rehearse and deliver showcase presentation<br>• Submit final deliverable |
 
 > **Note for the team:** Please create a GitHub Projects board in this repository to break these milestones into weekly tasks. Go to the **Projects** tab → **New project** → Choose **Board** → Add columns for each month.
 
 ---
 
 ## 📊 Dataset
-**Name and Source:** Stadium and Venue Review Datasets (nflverse, Open-Meteo, Census, GTFS)  
+**Name and Source:** nflverse nflreadpy (GitHub) Open-Meteo OpenStreetMap Overpass API Mobility Database GTFS.org U.S. Census Bureau API
 **Format:** CSV, JSON  
 **Size:** under 1gb  
-**Location:** Internal project folder/Kaggle Repository  
+**Location:** [Link to dataset or instructions for accessing it]
 
 ### Key Details
-- Stadium and venue review data, including fan reviews, ratings, and gameday experience factors. Sources include nflverse, nflreadpy, Open-Meteo, OpenStreetMap Overpass API, Mobility Database GTFS.org, and U.S. Census Bureau API.
-- Data requires normalization across disparate geographic and temporal scales; missing values in review text must be handled via NLP cleaning pipelines, while numeric API data requires interpolation for missing time-series points.
+- [Brief description of what's in the data]
+- [Any known limitations or preprocessing needed]
+- [Link to data dictionary or documentation, if available]
 
 ---
 
 ## 🛠️ Suggested Approach
-**ML Problem Type:** Classification & Regression  
-**Recommended Libraries:** Pandas, Scikit-learn, NLTK, Spacy, XGBoost  
-**Evaluation Metrics:** Precision-Recall AUC for classification, Mean Absolute Error (MAE) for price/value regression, and F1-score for sentiment classification.
 
+**ML Problem Type:** Regression
+
+**Recommended Libraries:**
+- [e.g., pandas, scikit-learn, TensorFlow, Hugging Face]
+
+**Evaluation Metrics:**
+- [e.g., Accuracy, Precision/Recall, RMSE, BLEU score]
+  
 ---
 
 ## 📚 Resources to Get Started
+
 The following resources will help your team understand the problem space and potential technical approaches for this project:
+
 **Background Reading:**
-- NFL Analytics: Introduction to the `nflverse` ecosystem and its application in stadium data.
+- [e.g., Link to an article or blog post about the problem domain]
+- [e.g., Link to an industry report or case study]
+
 **Technical Tutorials:**
-- Scikit-learn documentation on Classification and Regression pipelines for tabular datasets.
+- [e.g., Link to a free tutorial on the ML technique(s) involved]
+- [e.g., Link to documentation for a key library or tool]
+
 **Code Examples:**
-- Sample GitHub repositories showcasing NLP sentiment analysis applied to review-based datasets.
+- [e.g., Link to a relevant GitHub repo]
+- [e.g., Link to a sample implementation or starter code]
+
+**Other:**
+- [Links to any additional resources — e.g., papers, videos, podcasts, etc.]
+
+*Feel free to explore beyond these, and share anything interesting you find with me!*
 
 ---
 
 ## 🤝 How We'll Work Together
-**Check-ins:** During our biweekly 60-min AI Studio Lab Section meeting block (2nd and 4th week of every month)  
-**Communication:** Email and Slack workspace  
-**Response time:** 48 hours  
-**Recommended Tools:**
-- **Coding:** Google Colab Free Tier  
-- **Collaboration:** GitHub, Notion  
-- **Virtual Meetings:** Zoom, Google Meet  
+
+**Official check-ins:** During our biweekly 45-minute AI Studio Lab Section meeting block (2nd and 4th week of every month)
+
+ **Other ways to reach out to me with questions:** 
+* [e.g., Your team's channel within Break Through Tech’s Discord space]
+* [e.g., Email; please copy your teammates and AI Studio Coach]
+* [e.g., Request a team check-in on Zoom]
+* [Note: I will aim to respond within 48 hours. Please reach out to your AI Studio Coach with urgent questions.]
+
+> 💡 **Challenge Advisor: Please update the above based on your availability and preference. If you are not able to answer questions or meet with fellows outside of the biweekly Lab Section check-ins, simply write in "N/A (only available during the official check-in times)"**
+
+**Recommended free coding / collaboration tools**
+* […]
+* […]
 
 ---
 
 ## 🚀 Getting Started
-1. **Review this overview document** and note any questions for our first meeting.
-2. **Begin reviewing the dataset** using the link provided in the Dataset section.
-3. **Read the GitHub Projects documentation** [here](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects).
 
-I'm excited to work with you!
+1. **Review this overview document** and note any questions for our first meeting
+2. **Begin reviewing the dataset** using the link above
+3. **Read the GitHub Projects documentation** [here](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
+
+I’m excited to work with you!
 
 ---
 
 ## ❓ Questions?
-Please bring any questions to our first meeting during the week of August 24th (Break Through Tech's Bridge to Studio - Session B).
+
+Please bring any questions to our first meeting during the week of August 24th (Break Through Tech’s Bridge to Studio - Session C). 
