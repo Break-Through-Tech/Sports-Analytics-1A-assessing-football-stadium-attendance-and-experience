@@ -80,7 +80,13 @@ Use these milestones to guide your work. Your team will create a GitHub Projects
 ---
 
 ## 📊 Dataset
-**Name and Source:** nflverse nflreadpy (GitHub) Open-Meteo OpenStreetMap Overpass API Mobility Database GTFS.org U.S. Census Bureau API
+**Name and Source:** 
+nflverse (2026 Games/Venue Schedule): https://github.com/nflverse/nfldata/commit/a0c82c889d4db5654dc72ed58acc2a73a6a2d3df
+nflreadpy (GitHub) 
+Open-Meteo: https://open-meteo.com/?utm_source=chatgpt.com
+OpenStreetMap 
+Overpass API Mobility Database GTFS.org 
+U.S. Census Bureau API
 **Format:** CSV, JSON  
 **Size:** under 1gb  
 **Location:** [Link to dataset or instructions for accessing it]
