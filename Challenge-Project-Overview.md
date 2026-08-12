@@ -88,7 +88,7 @@ Use these milestones to guide your work. Your team will create a GitHub Projects
 ### Key Details
 - [Brief description of what's in the data]
 - [Any known limitations or preprocessing needed]
-- [Link to data dictionary or documentation, if available]
+- [Link to data dictionary or documentation, if available]2026 Games & Venue schedule: https://github.com/nflverse/nfldata/commit/a0c82c889d4db5654dc72ed58acc2a73a6a2d3df
 
 ---
 
