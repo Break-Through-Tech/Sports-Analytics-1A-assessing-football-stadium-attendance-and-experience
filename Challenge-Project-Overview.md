@@ -88,14 +88,15 @@ Use these milestones to guide your work. Your team will create a GitHub Projects
 - Overpass API: https://overpass-api.de/?utm_source=chatgpt.com
 - Mobility Database GTFS.org 
 U.S. Census Bureau API
-**Format:** CSV, JSON  
-**Size:** under 1gb  
-**Location:** [Link to dataset or instructions for accessing it]
+- **Format:** CSV, JSON  
+- **Size:** under 1gb  
+- **Location:** see links above
+
 
 ### Key Details
 - [Brief description of what's in the data]
-- [Any known limitations or preprocessing needed]
-- [Link to data dictionary or documentation, if available]2026 Games & Venue schedule: https://github.com/nflverse/nfldata/commit/a0c82c889d4db5654dc72ed58acc2a73a6a2d3df
+- Data Limitations: Data is real but may potentially become outdated [Any known limitations or preprocessing needed]
+- [Link to data dictionary or documentation, if available]
 
 ---
 
