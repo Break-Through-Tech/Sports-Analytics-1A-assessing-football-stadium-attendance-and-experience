@@ -82,8 +82,8 @@ Use these milestones to guide your work. Your team will create a GitHub Projects
 ## 📊 Dataset
 **Name and Source:** 
 - nflverse (2026 Games/Venue Schedule): https://github.com/nflverse/nfldata/commit/a0c82c889d4db5654dc72ed58acc2a73a6a2d3df
-- nflreadpy: Python library 
-- Ticketmaster API: https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/
+- nflreadpy: Python library
+- Ticket Pricing (2024): https://teammarketing.com/fci/2024-nfl-fan-cost-index/
 - **Format:** CSV, JSON  
 - **Size:** under 1gb  
 - **Location:** see links above
