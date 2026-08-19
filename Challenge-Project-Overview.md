@@ -83,8 +83,6 @@ Use these milestones to guide your work. Your team will create a GitHub Projects
 **Name and Source:** 
 - nflverse (2026 Games/Venue Schedule): https://github.com/nflverse/nfldata/commit/a0c82c889d4db5654dc72ed58acc2a73a6a2d3df
 - nflreadpy: Python library 
-- Open-Meteo: https://open-meteo.com/?utm_source=chatgpt.com
-- Overpass API: https://overpass-api.de/?utm_source=chatgpt.com
 - Ticketmaster API: https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/
 - **Format:** CSV, JSON  
 - **Size:** under 1gb  
@@ -92,7 +90,10 @@ Use these milestones to guide your work. Your team will create a GitHub Projects
 
 
 ### Key Details
-- [Brief description of what's in the data]
+- Data Descriptions:
+- nflverse (2026 Games/Venue Schedule): Provides free NFL game/schedule. There is also player, team, and play-by-play data. 
+- nflreadpy: Python package that makes it easy to pull nflverse data directly into Python.
+- Ticketmaster API: Potential source for ticket pricing data (unconfirmed); manual pricing data set can be created if needed.
 - Data Limitations: Data is real but may potentially become outdated [Any known limitations or preprocessing needed]
 - [Link to data dictionary or documentation, if available]
 
@@ -115,19 +116,19 @@ Use these milestones to guide your work. Your team will create a GitHub Projects
 The following resources will help your team understand the problem space and potential technical approaches for this project:
 
 **Background Reading:**
-- [e.g., Link to an article or blog post about the problem domain]
-- [e.g., Link to an industry report or case study]
+- Attendance and Experience shape team business strategies: https://www.sportsbusinessjournal.com/Articles/2024/08/12/business-of-football/
+- Understand how qualitative fan experience data influences attendance: https://www.reddit.com/r/NFLv2/comments/1u6fwgo/how_often_do_you_go_to_nfl_games_in_person/
 
 **Technical Tutorials:**
-- [e.g., Link to a free tutorial on the ML technique(s) involved]
+- N/A[e.g., Link to a free tutorial on the ML technique(s) involved]
 - [e.g., Link to documentation for a key library or tool]
 
 **Code Examples:**
-- [e.g., Link to a relevant GitHub repo]
+- N/A [e.g., Link to a relevant GitHub repo]
 - [e.g., Link to a sample implementation or starter code]
 
 **Other:**
-- [Links to any additional resources — e.g., papers, videos, podcasts, etc.]
+- N/A [Links to any additional resources — e.g., papers, videos, podcasts, etc.]
 
 *Feel free to explore beyond these, and share anything interesting you find with me!*
 
@@ -138,10 +139,8 @@ The following resources will help your team understand the problem space and pot
 **Official check-ins:** During our biweekly 45-minute AI Studio Lab Section meeting block (2nd and 4th week of every month)
 
  **Other ways to reach out to me with questions:** 
-* [e.g., Your team's channel within Break Through Tech’s Discord space]
-* [e.g., Email; please copy your teammates and AI Studio Coach]
-* [e.g., Request a team check-in on Zoom]
-* [Note: I will aim to respond within 48 hours. Please reach out to your AI Studio Coach with urgent questions.]
+* Email (best method): coleman.chris.m@gmail.com
+* Note: I typically respond within 24 hours or less. Please reach out to Bhavya (your AI Studio Coach) with urgent questions.
 
 > 💡 **Challenge Advisor: Please update the above based on your availability and preference. If you are not able to answer questions or meet with fellows outside of the biweekly Lab Section check-ins, simply write in "N/A (only available during the official check-in times)"**
 
