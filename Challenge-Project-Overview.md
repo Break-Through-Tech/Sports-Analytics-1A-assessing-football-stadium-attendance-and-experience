@@ -82,6 +82,7 @@ Use these milestones to guide your work. Your team will create a GitHub Projects
 ## 📊 Dataset
 **Name and Source:** 
 - nflverse (2026 Games/Venue Schedule): https://github.com/nflverse/nfldata/commit/a0c82c889d4db5654dc72ed58acc2a73a6a2d3df
+- nflverse (2025 team performance data): https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_regpost_2025.csv
 - nflreadpy: Python library
 - Ticket Pricing (2024): https://teammarketing.com/fci/2024-nfl-fan-cost-index/
 - **Format:** CSV, JSON  
@@ -92,8 +93,9 @@ Use these milestones to guide your work. Your team will create a GitHub Projects
 ### Key Details
 - Data Descriptions:
 - nflverse (2026 Games/Venue Schedule): Provides free NFL game/schedule. There is also player, team, and play-by-play data. 
+- nflverse (2025 team performance data): Provides free team performance data. A poor performing team usually means lower ticket pricing while high performing teams/popular franchises or SB winners will have higher ticket price averages.
 - nflreadpy: Python package that makes it easy to pull nflverse data directly into Python.
-- Ticketmaster API: Potential source for ticket pricing data (unconfirmed); manual pricing data set can be created if needed.
+- Ticket Pricing (2024): 2025/2026 pricing data may become available in September otherwise 2024 data will suffice with the assumption prices should be adjusted to accommodate price increase averages YoY.
 - Data Limitations: Data is real but may potentially become outdated [Any known limitations or preprocessing needed]
 - [Link to data dictionary or documentation, if available]
 
@@ -117,7 +119,7 @@ The following resources will help your team understand the problem space and pot
 
 **Background Reading:**
 - Attendance and Experience shape team business strategies: https://www.sportsbusinessjournal.com/Articles/2024/08/12/business-of-football/
-- Understand how qualitative fan experience data influences attendance: https://www.reddit.com/r/NFLv2/comments/1u6fwgo/how_often_do_you_go_to_nfl_games_in_person/
+- Understand how qualitative fan experience (data) and factors outside of price, team performance, weather, etc. influences attendance: https://www.reddit.com/r/NFLv2/comments/1u6fwgo/how_often_do_you_go_to_nfl_games_in_person/
 
 **Technical Tutorials:**
 - N/A[e.g., Link to a free tutorial on the ML technique(s) involved]
@@ -130,7 +132,7 @@ The following resources will help your team understand the problem space and pot
 **Other:**
 - N/A [Links to any additional resources — e.g., papers, videos, podcasts, etc.]
 
-*Feel free to explore beyond these, and share anything interesting you find with me!*
+*Feel free to explore beyond these, and share anything interesting you find with me!b I'm also happy to give an overview of the business or answer any questions you may have.*
 
 ---
 
