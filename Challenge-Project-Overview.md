@@ -1,49 +1,9 @@
----
-
-> ## Challenge Advisor: Update & Finalize Your Project Overview
->
-> > 💡 **These grey text instructions are just for you, the team's Challenge Advisor; please delete them once you have completed the steps below.**
->
-> We've pre-populated this Challenge Project Overview page — which is what will be shared with your Break Through Tech student team in August — using the details from your submission form. You should have received an email inviting you to join this repo as a Collaborator, enabling you to add files and make edits.
-> 
-> In order for your project to be finalized and assigned to a team, please:
-> 1. **Review all sections below** and update or expand any content as needed, making sure to address the SME Feedback in the section immediately below. Look for square brackets to find the places below that require additional inputs from you (e.g., "About [Company / Org Name]").
-> 2. **Add your dataset** to the [data folder](data) in this repo.
-> 3. **Close the Issue assigned to you in this repo** to let us know that you have made your edits and the overview page is ready for final review. You can do this by going to the _Issues_ tab in the top left section of the menu above, add a comment that says "CA review complete", and click the button to Close the Issue. 
->
-> If you're unfamiliar with how to edit a page like this in GitHub, check out [this tutorial](https://ubc-lib-geo.github.io/gis-workshop-waml-template/content/handson/edit-readme.html) for a quick overview (start with step 2 and only edit this page), and [this guide](https://ubc-lib-geo.github.io/gis-workshop-waml-template/content/markdown.html) on how to use Markdown to compose text.
->
->
-> ❌ Remember that this is a public repo. Do NOT include: Proprietary data, PII, API keys, credentials, or anything confidential.
-
----
-
-### 🔍 SME Feedback from the Break Through Tech Evaluation Team
-
-## 📋 BTT Internal Evaluation Notes
-*(This section is for BTT staff and CAs only — remove before sharing with students)*
-
-### Technical Vetting
-| Check | Status | Notes |
-| :--- | :--- | :--- |
-| Python Compatibility | 🟢 | Project relies on standard libraries (pandas, scikit-learn, nltk/spacy) which are well-supported in Colab. |
-| Data Readiness | 🟡 | Integrating multiple disparate APIs (Census, GTFS, Open-Meteo) significantly increases pre-processing burden for undergraduates. |
-| Resource Check | 🟢 | Dataset size is small, and hardware requirements are compatible with Google Colab free tier. |
-
-### Internal Scores
-- **Student Fit Score:** 6/10
-- **Technical Depth Score:** 7/10
-- **Overall Recommendation:** REVISE
-
-### Advisor Feedback Draft
-This project offers a compelling use case for fan engagement, but the data acquisition strategy is overly complex for a 12-week sprint. I recommend focusing on one or two core data sources (e.g., nflverse reviews and pricing) to ensure depth over breadth. Please narrow the scope to a deterministic classification of 'high vs. low value' to allow students to prioritize model explainability and evaluation metrics over API integration maintenance.
-
----
 
 # Assessing Football Stadium Attendance and Experience During the Regular Season
 
 **Company / Org:** Other  
-**Challenge Advisor:** Christina Coleman, coleman.chris.m@gmail.com  
+**Challenge Advisor:** Christina Coleman, coleman.chris.m@gmail.com.  
+**AI Studio Coach:** Bhavya Gopal, bhavya.gopal@breakthroughtech.org.   
 **Program:** Break Through Tech AI Studio - Fall 2026  
 
 ---
@@ -55,12 +15,13 @@ Other is an independent initiative focused on enhancing sports fan engagement th
 
 ## 🎯 The Challenge
 ### Project Summary
-In this project, you will use stadium and venue review data (Kaggle-hosted datasets covering fan reviews, ratings, and gameday experience factors) and natural language processing and predictive modeling techniques (e.g., sentiment analysis, regression/classification) to build a model that scores whether a given game is 'worth attending' based on price, seat quality, and overall fan experience signals. This will help our company address the challenge of helping fans make informed decisions about ticket value, ultimately improving gameday attendance and satisfaction."
+College football stadiums vary widely in attendance from game to game. Some games fill nearly every seat, while others draw only a fraction of the stadium's capacity. In this project, you will use college football game, venue, and weather data to build a classification model that predicts whether a home game is likely to have high or low stadium attendance relative to capacity. The goal is to help colleges understand what factors contribute to a strong gameday turnout and use those insights to make strategic decisions that improve the fan experience.
 
 ### Success Criteria
 
 - Understanding of agile/scrum methodologies (understands basic terminologies and ceremonies applied throughout duration of the program)
 - Team can confidently explain why they made decisions they did to get the model to its end state along the way
+- The "high-turnout" label is clearly defined, documented, and defended — you can explain why you drew the line where you did and what changes if you move it
 - Have a technical and non-technical understanding of the solution and use case (i.e. if communicating to non-technical audiences/final presentation prep)
 - Model successfully produces outputs
 
@@ -70,7 +31,7 @@ Use these milestones to guide your work. Your team will create a GitHub Projects
 | Month | Milestone | Key Activities |
 |---|---|---|
 | August | Challenge Setup & Team Onboarding | • Finalize challenge brief and dataset<br>• Draft rubric/success criteria for "worth attending" scoring model<br>• Onboard student teams; walk through problem statement and data |
-| September | Exploratory Data Analysis & Feature Engineering | • Teams complete exploratory data analysis (EDA) on the review dataset<br>• Data cleaning and feature engineering (price, seat quality, sentiment signals)<br>• Checkpoint: teams present initial data insights |
+| September | Exploratory Data Analysis & Feature Engineering | • Teams complete exploratory data analysis (EDA) on the review dataset<br>• Data cleaning and feature engineering <br>• Checkpoint: teams present initial data insights |
 | October | Baseline Modeling & Midpoint Review | • Baseline model development<br>• Midpoint check-in: model performance review, troubleshoot data gaps<br>• Begin iterating with sentiment components if using review text |
 | November | Model Refinement & User-Facing Output | • Model refinement and validation<br>• Build out user-facing output (dashboard, score, or simple interface if necessary)<br>• Draft presentation/pitch narrative tying the model back to the business problem |
 | December | Final Testing & Showcase | • Final testing<br>• Rehearse and deliver showcase presentation<br>• Submit final deliverable |
@@ -80,36 +41,33 @@ Use these milestones to guide your work. Your team will create a GitHub Projects
 ---
 
 ## 📊 Dataset
-**Name and Source:** 
-- nflverse (2026 Games/Venue Schedule): https://github.com/nflverse/nfldata/commit/a0c82c889d4db5654dc72ed58acc2a73a6a2d3df
-- nflverse (2025 team performance data): https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_regpost_2025.csv
-- nflreadpy: Python library
-- Ticket Pricing (2024): https://teammarketing.com/fci/2024-nfl-fan-cost-index/
-- **Format:** CSV, JSON  
-- **Size:** under 1gb  
-- **Location:** see links above
+**Name and Source:** College Football Data (CFBD) API — https://collegefootballdata.com
 
+- **Format:** JSON via API (exportable to CSV)
+- **Access:** Free API key at https://collegefootballdata.com/key — **register with your `.edu` email** for the Academic tier
+- **Documentation:** https://api.collegefootballdata.com
+- **Python client:** https://github.com/CFBD/cfbd-python
+- **No-code CSV export:** https://collegefootballdata.com/exporter
 
-### Key Details
-- Data Descriptions:
-- nflverse (2026 Games/Venue Schedule): Provides free NFL game/schedule. There is also player, team, and play-by-play data. 
-- nflverse (2025 team performance data): Provides free team performance data. A poor performing team usually means lower ticket pricing while high performing teams/popular franchises or SB winners will have higher ticket price averages.
-- nflreadpy: Python package that makes it easy to pull nflverse data directly into Python.
-- Ticket Pricing (2024): 2025/2026 pricing data may become available in September otherwise 2024 data will suffice with the assumption prices should be adjusted to accommodate price increase averages YoY.
-- Data Limitations: Data is real but may potentially become outdated [Any known limitations or preprocessing needed]
-- [Link to data dictionary or documentation, if available]
+### Optional sources to explore
+
+- **Kaggle** — [College Football Games 2000–2018](https://www.kaggle.com/datasets/jeffgallini/college-football-attendance-2000-to-2018), [CFB Attendance Data](https://www.kaggle.com/datasets/nilnomics/cfb-attendance-data), [College Sports Arenas](https://www.kaggle.com/datasets/nilnomics/college-sports-arenas). Useful for exploring on day one while API keys are pending.
+- [**Open-Meteo**](https://open-meteo.com/en/docs/historical-weather-api) — Free historical weather
+- [**IPEDS**](https://nces.ed.gov/ipeds/) — Free federal data on undergraduate enrollment by institution. Student body size is a real attendance driver and CFBD does not include school-level enrollment data.
+- [**Census ACS**](https://www.census.gov/data/developers/data-sets/acs-5year.html) — Local population and median income by county/metro.
+- [**NCAA official attendance reports**](https://www.ncaa.org/sports/2013/11/19/ncaa-football-attendance.aspx) — Annual PDFs back to 1998. Aggregate rather than per-game, but useful for sanity-checking your numbers.
 
 ---
 
 ## 🛠️ Suggested Approach
 
-**ML Problem Type:** Regression
+**ML Problem Type:** Binary Classification
 
 **Recommended Libraries:**
-- [e.g., pandas, scikit-learn, TensorFlow, Hugging Face]
+- cfbd, pandas, scikit-learn, matplotlib/seaborn, shap (explainability)
 
 **Evaluation Metrics:**
-- Accuracy, Precision/Recall, RMSE, BLEU score
+- Accuracy, Precision/Recall, AUC-ROC, Confusion Matrix
   
 ---
 
@@ -118,19 +76,22 @@ Use these milestones to guide your work. Your team will create a GitHub Projects
 The following resources will help your team understand the problem space and potential technical approaches for this project:
 
 **Background Reading:**
-- Attendance and Experience shape team business strategies: https://www.sportsbusinessjournal.com/Articles/2024/08/12/business-of-football/
-- Understand how qualitative fan experience (data) and factors outside of price, team performance, weather, etc. influences attendance: https://www.reddit.com/r/NFLv2/comments/1u6fwgo/how_often_do_you_go_to_nfl_games_in_person/
+- Attendance and experience shape team business strategies — Similar business tactics could potentially be applied to college football team strategies: https://www.sportsbusinessjournal.com/Articles/2024/08/12/business-of-football/
+- Understanding factors beyond price, team performance, and weather — Explore how qualitative fan experience and other factors may influence attendance:
+  - NFL perspective: https://www.reddit.com/r/NFLv2/comments/1u6fwgo/how_often_do_you_go_to_nfl_games_in_person/ 
+  - College football perspective: https://www.reddit.com/r/CFB/comments/1pvfkfp/fbs_game_attendance_by_city_population/ 
+- [College Football Attendance: A Panel Study of the Football Bowl Subdivision](https://www.tandfonline.com/doi/abs/10.1080/00036846.2013.866208) (Applied Economics)
+- [Does College Football Have an Attendance Problem?](https://athleticdirectoru.com/articles/does-college-football-have-an-attendance-problem/)
+- [Attendance Drops for College Football](https://www.npr.org/2019/08/24/753962604/attendance-drops-for-college-football) — NPR
 
 **Technical Tutorials:**
-- N/A[e.g., Link to a free tutorial on the ML technique(s) involved]
-- [e.g., Link to documentation for a key library or tool]
 
-**Code Examples:**
-- N/A [e.g., Link to a relevant GitHub repo]
-- [e.g., Link to a sample implementation or starter code]
+- [CFBD API Getting Started](https://api.collegefootballdata.com/) — Key setup and first request
+- [cfbd-python on GitHub](https://github.com/CFBD/cfbd-python) — Official Python client with per-endpoint documentation
 
 **Other:**
-- N/A [Links to any additional resources — e.g., papers, videos, podcasts, etc.]
+
+- [CFBD Discord](https://discord.gg/Eb3ex5a) — Active community and a useful place to ask data-related questions
 
 *Feel free to explore beyond these, and share anything interesting you find with me!b I'm also happy to give an overview of the business or answer any questions you may have.*
 
@@ -143,12 +104,6 @@ The following resources will help your team understand the problem space and pot
  **Other ways to reach out to me with questions:** 
 * Email (best method): coleman.chris.m@gmail.com
 * Note: I typically respond within 24 hours or less. Please reach out to Bhavya (your AI Studio Coach) with urgent questions.
-
-> 💡 **Challenge Advisor: Please update the above based on your availability and preference. If you are not able to answer questions or meet with fellows outside of the biweekly Lab Section check-ins, simply write in "N/A (only available during the official check-in times)"**
-
-**Recommended free coding / collaboration tools**
-* […]
-* […]
 
 ---
 
