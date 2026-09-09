@@ -13,7 +13,7 @@
 | Hung Le    | @Hungoliann | Data exploration, visualization, overall project coordination            |
 | Angel Chen   | @AngelChen914     | Data collection, exploratory data analysis (EDA), dataset documentation  |
 | Bhaumi Nadella     | @Bhaumii  | Data preprocessing, feature engineering, data validation                 |
-| Priya Mehta      | @pmehta       | Model selection, hyperparameter tuning, model training and optimization  |
+| Jameilynn Sibri     | @jamei-iiii    | Model selection, hyperparameter tuning, model training and optimization  |
 | Chris Park       | @chrispark    | Model evaluation, performance analysis, results interpretation           |
 
 ---
