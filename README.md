@@ -14,7 +14,7 @@
 | Angel Chen   | @AngelChen914     | Data collection, exploratory data analysis (EDA), dataset documentation  |
 | Bhaumi Nadella     | @Bhaumii  | Data preprocessing, feature engineering, data validation                 |
 | Jameilynn Sibri     | @jamei-iiii    | Model selection, hyperparameter tuning, model training and optimization  |
-| Chris Park       | @chrispark    | Model evaluation, performance analysis, results interpretation           |
+| Samil Rodriguez       | @SalmonSalado    | Model evaluation, performance analysis, results interpretation           |
 
 ---
 
@@ -46,6 +46,7 @@
 **Describe:**
 
 - How this project is connected to the Break Through Tech AI Program
+- This project connects to the Break Through Tech AI program because it provides an opportunity to showcase the knowledge and skills that were developed during the Summer Machine Learning Foundations course. 
 - Your AI Studio host company and the project objective and scope
 - The real-world significance of the problem and the potential impact of your work
 
