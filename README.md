@@ -52,18 +52,19 @@
 
 ---
 
-## 📊 **Data Exploration**
+## 📊 **Key Findings From EDA**
 
-**You might consider describing the following (as applicable):**
+Data: 2,021 FBS home games (2024–2026 seasons). 1,673 have a usable high_attendance label (≥90% of capacity), and 44% of those are high-attendance.
 
-* The dataset(s) used: origin, format, size, type of data
-* Data exploration and preprocessing approaches
-* Insights from your Exploratory Data Analysis (EDA)
-* Challenges and assumptions when working with the dataset(s)
+Stadium capacity is the strongest predictor of attendance (correlation 0.92), but some large stadiums still draw well below their size.
+Team strength matters. Home pregame Elo correlates at 0.72 and away pregame Elo at 0.37.
+Conference splits attendance sharply. The SEC (~79k) and Big Ten (~65k) lead; the MAC and C-USA trail at ~14k.
+Weather has almost no effect. Temperature, precipitation and wind all correlate near zero.
+Attendance is right-skewed. The median is ~36k, while a few games top 100k.
 
-**Potential visualizations to include:**
+Data quality: 14% of games are missing attendance. 308 games exceed listed capacity, likely due to outdated capacity figures; this doesn't affect the label.
 
-* Plots, charts, heatmaps, feature visualizations, sample dataset images
+Takeaway: Venue, conference and team strength should be the core features; weather adds little.
 
 ---
 
