@@ -1,1 +1,11 @@
-
+# Install with: python3 -m pip install -r requirements.txt
+# macOS only: XGBoost also needs OpenMP. Run once: brew install libomp
+pandas>=3.0
+numpy>=2.0
+scikit-learn>=1.5
+xgboost>=2.0
+matplotlib>=3.8
+seaborn>=0.13
+requests>=2.31
+ipykernel>=6.29
+EOF

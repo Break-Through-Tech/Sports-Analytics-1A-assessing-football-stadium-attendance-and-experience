@@ -1,1 +1,18 @@
+# Virtual environment
+.venv/
+venv/
 
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Mac
+.DS_Store
+
+# Secrets (API keys)
+.env
+*.key
+EOF
